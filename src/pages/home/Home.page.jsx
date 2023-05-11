@@ -213,7 +213,9 @@ const Home = () => {
   return (
     <Layout>
       <BannerComponent />
+      <div className="whychoose">
       <WhyChooseUsComponent />
+      </div>
       <div className="wrapper">
         <div className="booking-section">
           <div className="booking-title-section">
@@ -227,6 +229,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="aboout">
       <div className="wrapper">
         <div className="about-section">
           <h2>About us</h2>
@@ -245,6 +248,7 @@ const Home = () => {
             active adventurer looking for their next bigchallenge....
           </p>
         </div>
+      </div>
       </div>
       <div className="wrapper">
         <div className="client-section">
