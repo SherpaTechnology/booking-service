@@ -6,16 +6,12 @@
     height: auto
     // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9)
     border: 1px solid #ccc
-    padding: 20px
+    padding: 20px 20px 0px 20px
     border-radius: 6px
     margin-top: 25px
     &:hover
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)
 
-        &__image-section
-            &--modify
-                top: 0 !important
-                height: 100% !important
 .cards
     &__image-section
         position: relative
@@ -25,7 +21,7 @@
                 width: 100%
         &--modify
             position: absolute
-            top: 83%
+            top: 0
             left: 0
             bottom: 0
             right: 0
@@ -36,20 +32,22 @@
             align-items: center
             font-size: 1.6rem
             font-weight: bolder
-            height: 50px
             gap: 20px
+            overflow: hidden
     &__description
         &--title
-            font-size: 1.6rem
-            border-bottom: 1px solid #8F8F8F
             margin: 2rem 0rem
+            border-bottom: 1px solid #8F8F8F
+            padding-bottom: 1.4rem
             h3
+                font-size: 1.9rem
                 span
                     font-weight: 500
                     color: #8F8F8F
                     line-height: 1.5
+                    font-size: 1.5rem
+
         p
             font-size: 1.5rem
             line-height: 1.5
-            letter-spacing: 0.3px           
-            
+            letter-spacing: 0.3px
