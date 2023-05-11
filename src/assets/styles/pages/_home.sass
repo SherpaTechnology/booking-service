@@ -1,0 +1,72 @@
+@use "../layout/_gridsystem" as *
+
+.booking-section
+    padding: 0px 0px 2rem 0px
+    .booking-title-section
+        text-transform: uppercase
+        text-align: center
+        font-size: 3rem
+        margin-bottom: 5rem
+.card-components
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 25px
+.about-section
+    padding: 25px 0px
+    margin-top: 2rem
+    h2
+        font-size: 4rem
+        text-transform: uppercase
+        text-align: center
+        margin: 2rem 0 6rem 0
+
+    p
+        font-size: 1.5rem
+        line-height: 1.5
+        letter-spacing: 0.3px
+        max-width: 900px
+        margin: 0 auto
+        text-align: center
+        margin-bottom: 2rem
+.booking
+    background-color: #fff
+.client-section
+    padding: 25px 0px
+    .client-section__title
+        text-transform: uppercase
+        text-align: center
+        font-size: 3rem
+        margin-bottom: 5rem
+.review-cards
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: 25px
+.chat-section
+    padding: 6rem 0
+    &__detail
+        &--title
+            text-transform: uppercase
+            text-align: center
+            font-size: 3rem
+            margin-bottom: 5rem
+        p
+            font-size: 1.7rem
+            line-height:2
+            letter-spacing: 0.6px
+            max-width: 900px
+            margin: 0 auto
+            text-align: center
+            margin-bottom: 2rem
+
+    &__call
+        @include flex($justify:space-evenly)
+        max-width: 500px
+        margin: auto
+        &--button
+            width: 50%
+            max-width: 400px
+        &--number
+            font-size: 1.5rem
+            margin: 25px 0
