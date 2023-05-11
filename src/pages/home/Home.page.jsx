@@ -7,6 +7,8 @@ import ReviewCardComponent from "../../components/reviewCard/ReviewCard.componen
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../../components/button/Button.component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const cardsDetails = [
   {
@@ -274,11 +276,11 @@ const Home = () => {
             <div className="chat-section__call">
               <div className="chat-section__call--button">
                 <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
-                  Book a call back
+                  Book a call back 
                 </ButtonComponent>
               </div>
               <div className="chat-section__call--number">
-                <span>9803045098</span>
+                <span><FontAwesomeIcon icon={faPhone}/> 9803045098</span>
               </div>
             </div>
           </div>

@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import bgImg from "../../assets/images/b2.jpeg";
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
@@ -33,7 +35,7 @@ const CardComponent = ({ details }) => {
 
         <div className="card__button">
           <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
-            Learn More!
+            Learn More! <FontAwesomeIcon icon={faArrowRight}/>
           </ButtonComponent>
         </div>
       </div>

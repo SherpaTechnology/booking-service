@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../button/Button.component";
@@ -39,7 +41,7 @@ const BannerComponent = () => {
 
                   <div className="button-select">
                     <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
-                      Search
+                      Search <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </ButtonComponent>
                   </div>
                 </form>
