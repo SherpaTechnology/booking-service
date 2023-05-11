@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,7 +6,7 @@ import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../button/Button.component";
 import bgimage from "../../assets/images/b2.jpeg";
-import SelectInputComponent from "../selectInput/selectInput.component";
+import SelectInputComponent from "../../components/selectInput/SelectInput.component";
 
 const BannerComponent = () => {
   return (
