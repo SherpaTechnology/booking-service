@@ -15,20 +15,23 @@ $main-color: black
         padding: 17px 10px 10px 5px
         display: block
         width: 100%
-        border: 1px solid $sub-color
+        border: 1px solid #6a6c72
         margin: 20px 0
         &:focus
             outline: none
+            border: 1px solid #0C71E0
         &:focus ~ .form-input-label
             @include shrinkLabel()
-        .form-input-label
-            color: $sub-color
-            font-size: 16px
-            font-weight: normal
-            position: absolute
-            pointer-events: none
-            left: 5px
-            top: 10px
-            transition: 300ms ease all
-            &.shrink
-                @include shrinkLabel()
+      
+    .form-input-label
+        color: $sub-color
+        font-size: 14px
+        font-weight: normal
+        position: absolute
+        pointer-events: none
+        left: 15px
+        top: 13px
+        transition: 300ms ease all
+        text-transform: capitalize
+        &.shrink
+            @include shrinkLabel()

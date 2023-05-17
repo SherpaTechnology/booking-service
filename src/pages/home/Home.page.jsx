@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect } from "react";
 import Layout from "../../common/layout/Layout";
 import BannerComponent from "../../components/banner/banner.component";
 import WhyChooseUsComponent from "../../components/whyChooseUs/WhyChooseUs.component";
@@ -210,11 +211,14 @@ const reviewers = [
 ];
 
 const Home = () => {
+  // useEffect(() => {
+  //   window.scroll(0, 0);
+  // }, []);
   return (
     <Layout>
       <BannerComponent />
       <div className="whychoose">
-      <WhyChooseUsComponent />
+        <WhyChooseUsComponent />
       </div>
       <div className="wrapper">
         <div className="booking-section">
@@ -230,25 +234,27 @@ const Home = () => {
         </div>
       </div>
       <div className="aboout">
-      <div className="wrapper">
-        <div className="about-section">
-          <h2>About us</h2>
-          <p>
-            Everest is more than a mountain and the journey to Everest Base Camp
-            (5,364m/17,598ft) is more than just a trek. As you travel through
-            Sherpa villages and take in the awe-inspiring views, you will want
-            to come back again and again. The ultimate bucket listtrek for any
-            active adventurer looking for their next bigchallenge....
-          </p>
-          <p>
-            Everest is more than a mountain and the journey to Everest Base Camp
-            (5,364m/17,598ft) is more than just a trek. As you travel through
-            Sherpa villages and take in the awe-inspiring views, you will want
-            to come back again and again. The ultimate bucket listtrek for any
-            active adventurer looking for their next bigchallenge....
-          </p>
+        <div className="wrapper">
+          <div className="about-section">
+            <h2>About us</h2>
+            <p>
+              Everest is more than a mountain and the journey to Everest Base
+              Camp (5,364m/17,598ft) is more than just a trek. As you travel
+              through Sherpa villages and take in the awe-inspiring views, you
+              will want to come back again and again. The ultimate bucket
+              listtrek for any active adventurer looking for their next
+              bigchallenge....
+            </p>
+            <p>
+              Everest is more than a mountain and the journey to Everest Base
+              Camp (5,364m/17,598ft) is more than just a trek. As you travel
+              through Sherpa villages and take in the awe-inspiring views, you
+              will want to come back again and again. The ultimate bucket
+              listtrek for any active adventurer looking for their next
+              bigchallenge....
+            </p>
+          </div>
         </div>
-      </div>
       </div>
       <div className="wrapper">
         <div className="client-section">
@@ -280,11 +286,13 @@ const Home = () => {
             <div className="chat-section__call">
               <div className="chat-section__call--button">
                 <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
-                  Book a call back 
+                  Book a call back
                 </ButtonComponent>
               </div>
               <div className="chat-section__call--number">
-                <span><FontAwesomeIcon icon={faPhone}/> 9803045098</span>
+                <span>
+                  <FontAwesomeIcon icon={faPhone} /> 9803045098
+                </span>
               </div>
             </div>
           </div>

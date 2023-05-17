@@ -31,15 +31,15 @@ const WhyChooseUsComponent = () => {
           </div>
         </div>
         <div className="whychoose-left">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              // eslint-disable-next-line react/no-unknown-property
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-            ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            // eslint-disable-next-line react/no-unknown-property
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
