@@ -36,6 +36,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 1,
@@ -61,6 +63,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 1,
@@ -86,6 +90,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 2,
@@ -111,6 +117,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 3,
@@ -136,6 +144,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 1,
@@ -161,6 +171,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/12 Months",
   },
   {
     id: 4,
@@ -186,6 +198,8 @@ const cardsDetails = [
         month_name: "Dec",
       },
     ],
+    price: "$212pp",
+    priceWithTime: "$183/1 Months",
   },
 ];
 
@@ -254,6 +268,52 @@ const Home = () => {
               bigchallenge....
             </p>
           </div>
+        </div>
+      </div>
+      <div className="gallery">
+        <h1>Gallery</h1>
+
+        <div className="gallery-section">
+          <img
+            src="https://docs.google.com/uc?export=download&id=1U4Z-2GJcRDtIAmZt4ej0MOF_NvA0ntzS"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1cfqbl28ezKPikIXApzZQOEUPwKm2AKrr"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1I-bDFOoYZ-XUZkwDxRJmtiR_7DGVn_Eb"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1DU-S82guX9KooYyfDavkg1M_kpXAVrs1"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=10PElUch6-oxpjga6Pe6PoHd2VUXZkUfu"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1U4Z-2GJcRDtIAmZt4ej0MOF_NvA0ntzS"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1HAh9siwne5Fa39G2qIppry-aHrrFRrzb"
+            alt="Image"
+            width="100%"
+          />
+          <img
+            src="https://docs.google.com/uc?export=download&id=1YBHz72VKXRNUPge-h8pQvuVotim7LUq5"
+            alt="Image"
+            width="100%"
+          />
         </div>
       </div>
       <div className="wrapper">

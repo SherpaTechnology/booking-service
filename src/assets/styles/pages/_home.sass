@@ -3,13 +3,15 @@
 .whychoose
     background-color: #fff
 .booking-section
-    margin-top: 3rem
+    margin-top: 6.6rem
     padding: 0px 0px 2rem 0px
     .booking-title-section
         text-transform: uppercase
         text-align: center
         font-size: 3rem
         margin-bottom: 5rem
+        span
+            font-size: 2.2rem
         h2
             text-transform: capitalize
             letter-spacing: 1.3px
@@ -40,14 +42,18 @@
         margin-bottom: 2rem
 .booking
     background-color: #212529
+
 .client-section
+    margin-top: 3rem
+    margin-bottom: 4rem
     padding: 25px 0px
     .client-section__title
         text-transform: uppercase
         text-align: center
         font-size: 3rem
         margin-bottom: 5rem
-
+        span
+            font-size: 2.2rem
         h2
             text-transform: capitalize
             letter-spacing: 1.3px
@@ -67,14 +73,17 @@
             text-align: center
             font-size: 3rem
             margin-bottom: 5rem
+            span
+                font-size: 2.2rem
         p
-            font-size: 1.7rem
+            font-size: 1.5rem
             line-height: 2
             letter-spacing: 0.6px
             max-width: 900px
             margin: 0 auto
             text-align: center
             margin-bottom: 2rem
+            color: #ccc
 
     &__call
         @include flex($justify:space-evenly)
@@ -86,3 +95,28 @@
         &--number
             font-size: 1.5rem
             margin: 25px 0
+.gallery
+    h1
+        font-size: 4rem
+        text-transform: capitalize
+        text-align: center
+        margin: 2rem 0 6rem 0
+        letter-spacing: 1.3px
+        text-align: center
+        padding: 20px 0px
+.gallery-section
+    display: flex
+    flex-wrap: wrap
+    padding: 0 0.4rem
+    img
+        flex: 1
+        width: 100%
+        max-width: 25%
+        padding: .4rem .4rem
+        height: auto
+    @media (max-width:667px)
+        img
+            max-width: 50%
+    @media  (max-width:500px)
+        img
+            max-width: 100%

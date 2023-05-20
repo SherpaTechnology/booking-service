@@ -7,7 +7,7 @@ import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../button/Button.component";
 const CardComponent = ({ details }) => {
-  const { title, sub_title, description, months, id } = details;
+  const { title, sub_title, description, months, id ,price,priceWithTime} = details;
   return (
     <div className="card-container">
       <div className="cards">
@@ -27,6 +27,10 @@ const CardComponent = ({ details }) => {
             <h3>
               <span>{sub_title}</span>
             </h3>
+            <div className="cards__description--priceline">
+              <span>{price}</span>
+              <span>{priceWithTime}</span>
+            </div>
           </div>
           <div className="cards__description-des">
             <p>{description}</p>
@@ -35,7 +39,7 @@ const CardComponent = ({ details }) => {
 
         <div className="card__button">
           <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
-            Learn More! <FontAwesomeIcon icon={faArrowRight}/>
+            Learn More! <FontAwesomeIcon icon={faArrowRight} />
           </ButtonComponent>
         </div>
       </div>

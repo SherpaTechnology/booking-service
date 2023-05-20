@@ -1,10 +1,23 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
 import { memo } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faCalendarDays,
+} from "@fortawesome/free-solid-svg-icons";
 // eslint-disable-next-line react-refresh/only-export-components
-const SelectInputComponent = ({ ...otherProps }) => {
+
+const SelectInputComponent = ({ iconName, ...otherProps }) => {
   return (
     <div className="select-container">
+      <div className="icon">
+        {iconName && iconName === "location" ? (
+          <FontAwesomeIcon icon={faLocationDot} />
+        ) : (
+          <FontAwesomeIcon icon={faCalendarDays} />
+        )}
+      </div>
       <select
         id="country"
         defaultValue={"DEFAULT"}
@@ -17,7 +30,7 @@ const SelectInputComponent = ({ ...otherProps }) => {
         {otherProps.values &&
           otherProps.values.map((data, i) => (
             <option key={i} value={data}>
-              {data}
+              <div className="select-option">{data}</div>
             </option>
           ))}
       </select>
