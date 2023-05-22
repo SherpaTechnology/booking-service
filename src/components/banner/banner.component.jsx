@@ -6,8 +6,6 @@ import { Autoplay } from "swiper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
-  faLocationDot,
-  faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,

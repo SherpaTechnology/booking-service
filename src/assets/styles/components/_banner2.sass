@@ -1,0 +1,37 @@
+@use "../helper/_mixin" as *
+.banner-container
+    position: relative
+    height: 70vh
+    overflow: hidden
+
+    &__main
+        @include bgImage()
+        height: 100%
+        width: 100%
+
+        &::after
+            content: ""
+            @include dark($opacity:0.5)
+
+        &--content
+            @include centerElement($top:50% ,$left:50% )
+            z-index: 1
+
+            h1
+                font-size: 6.4rem
+                width: 100%
+                margin: auto
+                text-shadow: 1px 2px 4px 3px
+                line-height: 1.2
+                letter-spacing: 2px
+                text-align: left
+                margin-bottom: 2rem
+                color: #ffff
+            p
+                font-size: 2.3rem
+                color: #ffff
+                line-height: 1,2
+                text-align: left
+                margin-bottom: 3rem
+                width: 100%
+                margin: 3rem 0

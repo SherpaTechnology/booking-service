@@ -4,18 +4,20 @@
     height: 80vh
     width: 100%
     position: relative
+
 .banner-main
     height: 100%
     width: 100%
     @include bgImage()
-    filter: blur(0.1)
     &::after
         content: ""
         @include dark($opacity:0.5)
+
 .content
     @include centerElement($top:50% ,$left: 50%)
     width: 100%
     z-index: 1
+
     h1
         font-size: 6.4rem
         max-width: 500px
