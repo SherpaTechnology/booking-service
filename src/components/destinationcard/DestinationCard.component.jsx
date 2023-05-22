@@ -15,6 +15,7 @@ const DestinationCardComponent = ({ details }) => {
         <div className="dcard-container__main--content">
           <h3>{title}</h3>
           <p>{description}</p>
+          <span>View all tours</span>
         </div>
       </div>
     </div>
