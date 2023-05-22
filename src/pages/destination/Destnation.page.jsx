@@ -51,7 +51,10 @@ const DestnationPpage = () => {
   return (
     <Layout>
       <div className="banner">
-        <Banner2Component />
+        <Banner2Component
+          title="Destination Center"
+          description="Yours go to altitude trekking experts for Everet and all the adventures in between ."
+        />
       </div>
       <div className="wrapper">
         <div className="desdata">
