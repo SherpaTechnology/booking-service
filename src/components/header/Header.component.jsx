@@ -30,7 +30,7 @@ const HeaderComponent = () => {
           </Link>
         </li>
         <li className="navlink__header">
-          <Link to="/" className="navlink__header--modify">
+          <Link to="/contactus" className="navlink__header--modify">
             Contact
           </Link>
         </li>

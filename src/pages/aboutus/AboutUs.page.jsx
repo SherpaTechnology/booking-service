@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Layout from "../../common/layout/Layout";
 import Banner2Component from "../../components/banner2/banner2.Component";
 import UsercardComponent from "../../components/usercard/usercard.component";
@@ -99,7 +100,7 @@ const AboutUsPage = () => {
           <div className="chat-section">
             <div className="chat-section__detail">
               <div className="chat-section__detail--title">
-                <span>WED LOVE TO</span>
+                <span>WE'D LOVE TO</span>
                 <h2>Have a CHat</h2>
               </div>
               <p>
