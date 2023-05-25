@@ -7,15 +7,16 @@ import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../button/Button.component";
 const CardComponent = ({ details }) => {
-  const { title, sub_title, description, months, id ,price,priceWithTime} = details;
+  const { title, sub_title, description, months, id, price, priceWithTime } =
+    details;
   return (
     <div className="card-container">
       <div className="cards">
-        <div key={id} className="cards__image-section">
-          <div className="cards__image-section--image">
+        <div key={id} className="cards__content">
+          <div className="cards__content--image">
             <img src={bgImg} alt={`${title}`} />
           </div>
-          <div className="cards__image-section--modify">
+          <div className="cards__content--modify">
             {months.map(month => (
               <span key={month.id}>{month.month_name}</span>
             ))}

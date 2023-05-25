@@ -15,17 +15,33 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)
 
 .cards
-    &__image-section
+    &__content
         position: relative
+        &:hover
+            .cards__content--modify
+                top: 0
+                height: 99%
+                cursor: pointer
         &--image
             width: 100%
+            &:hover
+                .cards__content--modify
+                    top: 0
+                    height: 99%
+                    cursor: pointer
+            &:hover
+                cursor: pointer
+                &--modify
+                    top: 0
+                    background-color: red
+                    cursor: pointer
             img
                 width: 100%
+
         &--modify
             position: absolute
-            top: 0
+            top: calc( 100% - 44px )
             left: 0
-            bottom: 3px
             right: 0
             background-color: rgba(#4285f4, 0.5)
             color: #fff
@@ -36,7 +52,9 @@
             font-weight: bolder
             gap: 20px
             overflow: hidden
-            transition: .2s all
+            transition: .45s all ease-in-out
+            height: 40px
+         
 
     &__description
         &--title

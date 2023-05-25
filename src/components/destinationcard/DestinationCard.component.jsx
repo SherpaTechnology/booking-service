@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import bgimage from "../../assets/images/b2.jpeg";
 
 const DestinationCardComponent = ({ details }) => {
   const { title, description, time } = details;
@@ -7,8 +6,12 @@ const DestinationCardComponent = ({ details }) => {
     <div className="dcard-container">
       <div className="dcard-container__main">
         <div className="dcard-container__main--bgimage">
-          <img src={bgimage} alt="" />
-        </div>
+        <img
+            src="https://docs.google.com/uc?export=download&id=1U4Z-2GJcRDtIAmZt4ej0MOF_NvA0ntzS"
+            alt="Image"
+            width="100%"
+          />
+         </div>
         <div className="dcard-container__main--button">
           <span>{time}</span>
         </div>
