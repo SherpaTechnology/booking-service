@@ -58,17 +58,15 @@
             text-transform: capitalize
             letter-spacing: 1.3px
 
-.review-cards
-    width: 100%
-    display: grid
-    grid-template-columns: repeat(3,1fr)
-    column-gap: 25px
+.review-card
     &:hover
         .review-cards-container
-            transform: scale(1.06)translateY(-25px)
+            transform: scale(1.02)translateY(-25px)
         .review-cards-container:not(:hover)
             transform: scale(0.99)translateY(0)
+.swiper-button-next:after,.swiper-button-prev:after
 
+    font-size: 3rem
 .chat-section
     padding: 6rem 0
     color: #ccc

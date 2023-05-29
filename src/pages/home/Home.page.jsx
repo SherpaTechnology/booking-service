@@ -10,6 +10,11 @@ import ButtonComponent, {
 } from "../../components/button/Button.component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const cardsDetails = [
   {
@@ -222,6 +227,24 @@ const reviewers = [
     description:
       "Morocco & Nepal I have recently completed two trips with EverTrek, oneto Morocco and one to Nepal. Both ...",
   },
+  {
+    id: 4,
+    name: "Phil Wills",
+    description:
+      "Morocco & Nepal I have recently completed two trips with EverTrek, oneto Morocco and one to Nepal. Both ...",
+  },
+  {
+    id: 5,
+    name: "Nabaraj Rai",
+    description:
+      "Morocco & Nepal I have recently completed two trips with EverTrek, oneto Morocco and one to Nepal. Both ...",
+  },
+  {
+    id: 6,
+    name: "Sherpa Sir",
+    description:
+      "Morocco & Nepal I have recently completed two trips with EverTrek, oneto Morocco and one to Nepal. Both ...",
+  },
 ];
 
 const Home = () => {
@@ -322,10 +345,39 @@ const Home = () => {
             <span>What Our</span>
             <h2> Client Say</h2>
           </div>
-          <div className="review-cards">
-            {reviewers.map(data => (
-              <ReviewCardComponent key={data.id} reviewer={data} />
-            ))}
+          <div className="review-card">
+            <Swiper
+              slidesPerView={2}
+              speed={1000}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              navigation={true}
+              modules={[Autoplay, Navigation]}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 3,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 4,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+              }}
+            >
+              {reviewers.map(data => (
+                <>
+                  <SwiperSlide>
+                    <ReviewCardComponent key={data.id} reviewer={data} />
+                  </SwiperSlide>
+                </>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
