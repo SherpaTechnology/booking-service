@@ -12,8 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
   faPhone,
-  faArrowRight,
-  faArrowLeft,
+  faAngleRight,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 const defaultValues = {
@@ -127,14 +127,20 @@ const SearachPage = () => {
               <SearchCardComponent />
               <SearchCardComponent />
               <SearchCardComponent />
+              <SearchCardComponent />
+              <SearchCardComponent />
               <div className="search__left--pagination">
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <div className="search__left--icon">
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </div>
                 <span>1</span>
                 <span>2</span>
                 <span>3</span>
                 <span>4</span>
                 <span>5</span>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <div className="search__left--icon">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
             </div>
           </div>
