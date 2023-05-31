@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../button/Button.component";
 
 const WhyChooseUsComponent = () => {
+  const navigate = useNavigate();
+  const navigateTodestination = () => {
+    navigate("destination");
+  };
   return (
     <div className="wrapper">
       <div className="main-content">
@@ -25,7 +30,10 @@ const WhyChooseUsComponent = () => {
             <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.inverted}>
               Why choose us
             </ButtonComponent>
-            <ButtonComponent buttonType={BUTTON_TYPE_CLASSES.normal}>
+            <ButtonComponent
+              buttonType={BUTTON_TYPE_CLASSES.normal}
+              onClick={navigateTodestination}
+            >
               View Destinations
             </ButtonComponent>
           </div>

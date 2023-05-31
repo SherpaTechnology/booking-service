@@ -1,11 +1,18 @@
+import { Link } from "react-router-dom";
 const FooterComponent = () => {
   return (
     <footer className="footer">
       <nav>
         <ul>
-          <li>About Us</li>
-          <li>Destnations</li>
-          <li>Cotact</li>
+          <li>
+            <Link to="/aboutus">About Us</Link>
+          </li>
+          <li>
+            <Link to="/destination">Destination</Link>
+          </li>
+          <li>
+            <Link to="/contactus">Contact</Link>
+          </li>
           <li>Site Map</li>
         </ul>
       </nav>
