@@ -14,7 +14,7 @@ import {
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../../components/button/Button.component";
-import PricecardComponent from "../../components/pricecard/pricecard.component";
+import PricecardComponent from "../../components/pricecard/Pricecard.component";
 import BookcardComponent from "../../components/bookcard/Bookcard.component";
 
 const accordionData = [
