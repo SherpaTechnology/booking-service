@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/aboutus/AboutUs.page";
 import ContactPage from "./pages/contact/Contact.pages";
 import SearachPage from "./pages/search/Searach.page";
 import "./assets/styles/main.sass";
+import CardPreviewPage from "./pages/cardPreview/CardPreview.page";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/destination" element={<DestnationPpage />} />
+        <Route path="/holiday/:name" element={<CardPreviewPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/contactus" element={<ContactPage />} />
         <Route path="/search" element={<SearachPage />} />

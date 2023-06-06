@@ -1,0 +1,82 @@
+@use "../layout/_gridsystem" as *
+@use "../helper/_mixin" as *
+.card-preview-section
+    background: #394c50
+    padding: 2.5rem 0 2.5rem 0
+.price-section-container
+    @include flex($justify: flex-start)
+    gap: 9rem
+.height-section-info , .day-section-info, .price-section-info
+    font-size: 1.6rem
+    @include flex($justify:space-between)
+    gap: 1rem
+    color: #fff
+.details-section
+    background: #23383C
+    padding-top: 3.5rem
+.details-section-container
+    @include flex($justify:center)
+    gap: 0.6rem
+    align-items: end
+
+    &__modify
+        background: #ffff
+        padding: 1.6rem 3.4rem
+        width: 100%
+        max-width: 300px
+        margin: 0 auto
+        @include flex($justify:center)
+        font-size: 1.3rem
+        text-transform: uppercase
+        letter-spacing: 0.1rem
+        cursor: pointer
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px
+        @include trans()
+        &:hover
+            background: #4285f4
+            color: #fff
+.active
+    background: #4285f4
+    color: #fff
+.tab1
+    padding: 4rem 0
+    width: 100%
+    margin: 0 auto
+    &__paragraph
+        p
+            text-align: left
+            font-size: 1.6rem
+            line-height: 1.3
+            margin-bottom: 2.2rem
+        &--modifier
+            ul
+                list-style: inside
+                text-align: left
+                font-size: 1.5rem
+                line-height: 1.5
+                color: #6a6c72
+                margin-bottom: 2.2rem
+    &__details
+        @include flex($justify:space-between)
+        gap: 1.5rem
+        @include trans()
+        &--modifier
+            h2
+                font-size: 1.9rem
+                margin-bottom: 2rem
+            ul
+                list-style: square
+                text-align: left
+                font-size: 1.5rem
+                line-height: 1.5
+                color: #6a6c72
+                margin-bottom: 2.2rem
+.d-block
+    opacity: 1
+    transform: translateY(0)
+    @include trans()
+
+.d-none
+    opacity: 0
+    transform: translateY(10px)
+    @include trans()

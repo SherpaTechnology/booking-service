@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect } from "react";
+import { useContext } from "react";
+import { CardDetailsContext } from "../../contexts/cardDetails/cardDetails.context";
 import Layout from "../../common/layout/Layout";
 import BannerComponent from "../../components/banner/banner.component";
 import WhyChooseUsComponent from "../../components/whyChooseUs/WhyChooseUs.component";
@@ -15,198 +16,6 @@ import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-const cardsDetails = [
-  {
-    id: 1,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 1,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 1,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 2,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 3,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 1,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/12 Months",
-  },
-  {
-    id: 4,
-    title: "Everest Base Camp Trek",
-    sub_title: "Nepal,ASIA-15 Nights",
-    description:
-      "Everest is more than a mountain and the journey to Everest Base Camp (5,364m/17,598ft) is more than just a trek. As you travel through Sherpa villages and take in the awe-inspiring views, you will want to come back again and again. The ultimate bucket listtrek for any active adventurer looking for their next bigchallenge....",
-    months: [
-      {
-        id: 1,
-        month_name: "May",
-      },
-      {
-        id: 2,
-        month_name: "Oct",
-      },
-      {
-        id: 3,
-        month_name: "Jun",
-      },
-      {
-        id: 4,
-        month_name: "Dec",
-      },
-    ],
-    price: "$212pp",
-    priceWithTime: "$183/1 Months",
-  },
-];
 
 const reviewers = [
   {
@@ -251,6 +60,7 @@ const Home = () => {
   // useEffect(() => {
   //   window.scroll(0, 0);
   // }, []);
+  const { cardDetails } = useContext(CardDetailsContext);
   return (
     <Layout>
       <BannerComponent />
@@ -264,9 +74,10 @@ const Home = () => {
             <h2>Advanture</h2>
           </div>
           <div className="card-components">
-            {cardsDetails.map(data => (
-              <CardComponent key={data.id} details={data} />
-            ))}
+            {cardDetails &&
+              cardDetails.map(data => (
+                <CardComponent key={data.id} details={data} />
+              ))}
           </div>
         </div>
       </div>
