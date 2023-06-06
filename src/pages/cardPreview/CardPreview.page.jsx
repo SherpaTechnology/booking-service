@@ -14,6 +14,8 @@ import {
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../../components/button/Button.component";
+import PricecardComponent from "../../components/pricecard/pricecard.component";
+import BookcardComponent from "../../components/bookcard/Bookcard.component";
 
 const accordionData = [
   {
@@ -77,6 +79,20 @@ const infodata = [
     Repudiandae, mollitia id reprehenderit a ab odit! Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
+  },
+];
+const priceDetails = [
+  {
+    title: "First...",
+    content: "<span>Deposit</span> £200",
+  },
+  {
+    title: "Then...",
+    content: "<span>12 Monthly Payments From</span> £240",
+  },
+  {
+    title: "OR...",
+    content: "<span>1 Full Payment From</span> £2,145PP",
   },
 ];
 const CardPreviewPage = () => {
@@ -295,39 +311,17 @@ const CardPreviewPage = () => {
             <h1>Dates & Prices</h1>
             <div className="tab5-detail">
               <div className="tab5-booking">
-                <div className="tab5-booking-title">
-                  <div className="tab5-booking-title__details">
-                    <span>First</span>
-                    <div className="tab5-booking-title__details--modifier">
-                      <h3>
-                        <span>Deposit</span>
-                        £200
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="tab5-booking-title">
-                  <div className="tab5-booking-title__details">
-                    <span>First</span>
-                    <div className="tab5-booking-title__details--modifier">
-                      <h3>
-                        <span>12 Monthly Payments From</span>
-                        £165
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="tab5-booking-title">
-                  <div className="tab5-booking-title__details">
-                    <span>First</span>
-                    <div className="tab5-booking-title__details--modifier">
-                      <h3>
-                        <span>Deposit</span>
-                        £200
-                      </h3>
-                    </div>
-                  </div>
-                </div>
+                {priceDetails.map((data, i) => (
+                  <PricecardComponent details={data} key={i} />
+                ))}
+              </div>
+              <div className="tab5-book">
+                <BookcardComponent />
+                <BookcardComponent />
+                <BookcardComponent />
+                <BookcardComponent />
+                <BookcardComponent />
+                <BookcardComponent />
               </div>
             </div>
           </div>

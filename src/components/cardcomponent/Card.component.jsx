@@ -14,15 +14,15 @@ const CardComponent = ({ details }) => {
     details;
 
   const navigate = useNavigate();
-  const {setId}=useContext(IdContext);
-  console.log("siteid",setId);
-  const navigateToPreview=(name)=>{
-    navigate(`/holiday/${name}`);
+  const { setId } = useContext(IdContext);
+  console.log("siteid", setId);
+  const navigateToPreview = name => {
+    navigate(`/holidays/${name}`);
     setId(id);
-  }
+  };
   return (
     <div className="card-container">
-      <div className="cards" onClick={()=>navigateToPreview(title)}>
+      <div className="cards" onClick={() => navigateToPreview(title)}>
         <div key={id} className="cards__content">
           <div className="cards__content--image">
             <img src={bgImg} alt={`${title}`} />

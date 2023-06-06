@@ -16,10 +16,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/destination" element={<DestnationPpage />} />
-        <Route path="/holiday/:name" element={<CardPreviewPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/contactus" element={<ContactPage />} />
-        <Route path="/search" element={<SearachPage />} />
+        <Route path="/holidays" element={<SearachPage />} />
+        <Route path="/holidays/:name" element={<CardPreviewPage />} />
       </Routes>
     </Fragment>
   );

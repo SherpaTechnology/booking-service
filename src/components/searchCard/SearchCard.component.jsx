@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const SearchCardComponent = () => {
+  const navigate = useNavigate();
+  const handleHoliday = () => {
+    navigate(`/holidays/Annapurna Circuit Trek`);
+  };
   return (
-    <div className="search-card-container">
+    <div className="search-card-container" onClick={() => handleHoliday()}>
       <div className="search-card-container__right">
         <div className="search-card-container__right--image">
           <img

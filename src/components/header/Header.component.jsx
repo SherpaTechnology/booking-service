@@ -25,7 +25,7 @@ const HeaderComponent = () => {
           </Link>
         </li>
         <li className="navlink__header">
-          <Link to="/search" className="navlink__header--modify">
+          <Link to="/holidays" className="navlink__header--modify">
             Search
           </Link>
         </li>
