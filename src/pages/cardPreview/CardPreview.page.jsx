@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import AccordioncardComponent from "../../components/accordioncard/Accordioncard.component";
 import Layout from "../../common/layout/Layout";
 import SearchBannerComponent from "../../components/searchBanner/SearchBanner.component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +14,71 @@ import {
 import ButtonComponent, {
   BUTTON_TYPE_CLASSES,
 } from "../../components/button/Button.component";
+
+const accordionData = [
+  {
+    title: "Day 1 - Welcome to Kathmandu ",
+    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+    laborum cupiditate possimus labore, hic temporibus velit dicta earum
+    suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+    voluptatem.`,
+  },
+  {
+    title:
+      "Day 2 - Kathmandu Valley sightseeing and trek preparation (1,300m/4,264 ft) ",
+    content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
+    reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
+    quaerat iure quos dolorum accusantium ducimus in illum vero commodi
+    pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
+    quidem maiores doloremque est numquam praesentium eos voluptatem amet!
+    Repudiandae, mollitia id reprehenderit a ab odit! Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+    dolor ut sequi minus iste? Quas?`,
+  },
+  {
+    title:
+      "Day 3 - Drive/Flight from Kathmandu to Pokhara (820m/2,690ft) 6-7 hours ",
+    content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+    dolor ut sequi minus iste? Quas?`,
+  },
+  {
+    title:
+      "Day 4 - Drive/Flight from Kathmandu to Pokhara (820m/2,690ft) 6-7 hours ",
+    content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+    dolor ut sequi minus iste? Quas?`,
+  },
+  {
+    title:
+      "Day 5 - Drive/Flight from Kathmandu to Pokhara (820m/2,690ft) 6-7 hours ",
+    content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+    dolor ut sequi minus iste? Quas?`,
+  },
+];
+
+const infodata = [
+  {
+    title: "Day 1 - Welcome to Kathmandu ",
+    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+    laborum cupiditate possimus labore, hic temporibus velit dicta earum
+    suscipit commodi eum enim atque at? Et perspiciatis dolore iure
+    voluptatem.`,
+  },
+  {
+    title:
+      "Day 2 - Kathmandu Valley sightseeing and trek preparation (1,300m/4,264 ft) ",
+    content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
+    reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
+    quaerat iure quos dolorum accusantium ducimus in illum vero commodi
+    pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
+    quidem maiores doloremque est numquam praesentium eos voluptatem amet!
+    Repudiandae, mollitia id reprehenderit a ab odit! Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+    quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
+    dolor ut sequi minus iste? Quas?`,
+  },
+];
 const CardPreviewPage = () => {
   const [tabName, setTabName] = useState(1);
   const handleTab = name => {
@@ -72,7 +138,7 @@ const CardPreviewPage = () => {
               }`}
               onClick={() => handleTab(3)}
             >
-              <h3>Dates and Prices</h3>
+              <h3>Extra info</h3>
             </div>
             <div
               className={`details-section-container__modify  ${
@@ -173,13 +239,57 @@ const CardPreviewPage = () => {
             </div>
           </div>
           <div className={`tab2 ${tabName === 2 ? "d-block" : "d-none"}`}>
-            <h2>I am itinary</h2>
+            <h1>Itinerary</h1>
+            <div className="tab2__acc">
+              {accordionData.map((data, i) => (
+                <AccordioncardComponent details={data} key={i} />
+              ))}
+            </div>
           </div>
           <div className={`tab3 ${tabName === 3 ? "d-block" : "d-none"}`}>
-            <h2>I am data and price</h2>
+            <h1>Extras</h1>
+            <div className="tab3__info">
+              <div className="tab3__info--imge">
+                <img
+                  src="https://docs.google.com/uc?export=download&id=1YBHz72VKXRNUPge-h8pQvuVotim7LUq5"
+                  alt="Image"
+                  width="100%"
+                />
+              </div>
+              <div className="tab3__des">
+                <div className="tab3__des--title">
+                  <h2>Chitwan Extension - Jungle Safari</h2> <span>£ 695</span>
+                </div>
+                <div className="tab3__des--para">
+                  <p>
+                    Chitwan National Park. Once your trek is finished, why not
+                    relax and explore a rarely visited part of Nepal on our 3
+                    Night tour of Chitwan national park.
+                  </p>
+                  <p>
+                    Chitwan National Park. Once your trek is finished, why not
+                    relax and explore a rarely visited part of Nepal on our 3
+                    Night tour of Chitwan national park.
+                  </p>
+                  <ul>
+                    <li>A unique trip designed by EverTrek.</li>
+                    <li>
+                      See animals in their natural environment like Tigers,
+                      Rhinos and Crocodiles
+                    </li>
+                    <li>You stay in a comfortable lodge & Hotel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={`tab4 ${tabName === 4 ? "d-block" : "d-none"}`}>
-            <h2>I am more info</h2>
+            <h1>More Infos</h1>
+            <div className="tab4__acc">
+              {infodata.map((data, i) => (
+                <AccordioncardComponent details={data} key={i} />
+              ))}
+            </div>
           </div>
           <div className={`tab5 ${tabName === 5 ? "d-block" : "d-none"}`}>
             <h2>I am book</h2>
