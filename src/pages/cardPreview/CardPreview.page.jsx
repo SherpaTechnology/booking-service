@@ -292,7 +292,44 @@ const CardPreviewPage = () => {
             </div>
           </div>
           <div className={`tab5 ${tabName === 5 ? "d-block" : "d-none"}`}>
-            <h2>I am book</h2>
+            <h1>Dates & Prices</h1>
+            <div className="tab5-detail">
+              <div className="tab5-booking">
+                <div className="tab5-booking-title">
+                  <div className="tab5-booking-title__details">
+                    <span>First</span>
+                    <div className="tab5-booking-title__details--modifier">
+                      <h3>
+                        <span>Deposit</span>
+                        £200
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="tab5-booking-title">
+                  <div className="tab5-booking-title__details">
+                    <span>First</span>
+                    <div className="tab5-booking-title__details--modifier">
+                      <h3>
+                        <span>12 Monthly Payments From</span>
+                        £165
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="tab5-booking-title">
+                  <div className="tab5-booking-title__details">
+                    <span>First</span>
+                    <div className="tab5-booking-title__details--modifier">
+                      <h3>
+                        <span>Deposit</span>
+                        £200
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
