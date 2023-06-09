@@ -183,7 +183,7 @@ const Home = () => {
             >
               {reviewers.map(data => (
                 <>
-                  <SwiperSlide>
+                  <SwiperSlide key={data.id}>
                     <ReviewCardComponent key={data.id} reviewer={data} />
                   </SwiperSlide>
                 </>
