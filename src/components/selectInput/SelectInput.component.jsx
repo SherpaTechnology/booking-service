@@ -30,7 +30,7 @@ const SelectInputComponent = ({ iconName, ...otherProps }) => {
         {otherProps.values &&
           otherProps.values.map((data, i) => (
             <option key={i} value={data}>
-              <div className="select-option">{data}</div>
+              {data}
             </option>
           ))}
       </select>

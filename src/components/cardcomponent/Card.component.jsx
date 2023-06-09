@@ -15,7 +15,6 @@ const CardComponent = ({ details }) => {
 
   const navigate = useNavigate();
   const { setId } = useContext(IdContext);
-  console.log("siteid", setId);
   const navigateToPreview = name => {
     navigate(`/holidays/${name}`);
     setId(id);

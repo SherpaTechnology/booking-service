@@ -182,11 +182,9 @@ const Home = () => {
               }}
             >
               {reviewers.map(data => (
-                <>
                   <SwiperSlide key={data.id}>
                     <ReviewCardComponent key={data.id} reviewer={data} />
                   </SwiperSlide>
-                </>
               ))}
             </Swiper>
           </div>

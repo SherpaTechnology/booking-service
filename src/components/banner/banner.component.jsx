@@ -36,7 +36,6 @@ const DefaultSelectValues = {
 
 const BannerComponent = () => {
   const [selectedForms, setSelectedForms] = useState(DefaultSelectValues);
-  console.log("hhe", selectedForms);
   const handleSelected = e => {
     const { name, value } = e.target;
     setSelectedForms({ ...selectedForms, [name]: value });
