@@ -9,6 +9,12 @@
     border: 1px solid #ccc
     padding: 2rem 2rem 2rem 2rem
     margin-bottom: 2rem
+    @media (max-width:800px)
+        flex-direction: column
+        width: 70%
+        margin: 0 auto
+        margin-bottom: 3rem
+
     &:hover
         cursor: pointer
         .search-card-container__right--text
@@ -22,6 +28,8 @@
         &--image
             min-width: 420px
             min-height: 300px
+            @media (max-width: 800px)
+                min-width: 100%
             img
                 width: 100%
                 min-height: 300px
@@ -43,6 +51,8 @@
             transition: .45s all ease-in-out
             height: 40px
     &__left
+        @media (max-width:480px)
+            width: 100%
         &--title
             border-bottom: 1px solid #8F8F8F
             padding-bottom: 1.4rem
@@ -75,6 +85,9 @@
             align-items: center
             margin-top: 3rem
             margin-bottom: 0.3rem
+            @media (max-width:480px)
+                flex-direction: column
+
             span
                 display: block
                 padding: 1.2rem 3rem
@@ -84,3 +97,6 @@
                 font-weight: bolder
                 color: #000
                 letter-spacing: 1.1px
+            div
+                @media (max-width:480px)
+                    margin: 1.2rem
