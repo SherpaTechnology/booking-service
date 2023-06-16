@@ -7,8 +7,15 @@
     flex-wrap: wrap
     &:nth-last-child(1)
         border-bottom: none
+    @media (max-width:500px)
+        justify-content: center
+        gap: 2rem
+
     &__date
         font-size: 1.8rem
+        @media (max-width: 667px)
+            text-align: center
+            margin-bottom: 2rem
         span
             display: block
             line-height: 2.8rem
@@ -17,6 +24,8 @@
     &__price
         @include flex($justify:space-between)
         gap: 2rem
+        @media (max-width:500px)
+            flex-direction: column
         &--title
             font-size: 1.4rem
         span
@@ -33,3 +42,6 @@
         p
             color: green
             letter-spacing: 1.5px
+    &__button
+        @media (max-width:480px)
+            margin-bottom: 3rem
