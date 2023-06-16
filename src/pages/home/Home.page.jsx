@@ -164,7 +164,7 @@ const Home = () => {
               navigation={true}
               modules={[Autoplay, Navigation]}
               breakpoints={{
-                640: {
+                0: {
                   slidesPerView: 1,
                   spaceBetween: 3,
                 },
