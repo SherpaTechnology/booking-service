@@ -57,9 +57,6 @@ const reviewers = [
 ];
 
 const Home = () => {
-  // useEffect(() => {
-  //   window.scroll(0, 0);
-  // }, []);
   const { cardDetails } = useContext(CardDetailsContext);
   return (
     <Layout>
@@ -182,9 +179,9 @@ const Home = () => {
               }}
             >
               {reviewers.map(data => (
-                  <SwiperSlide key={data.id}>
-                    <ReviewCardComponent key={data.id} reviewer={data} />
-                  </SwiperSlide>
+                <SwiperSlide key={data.id}>
+                  <ReviewCardComponent key={data.id} reviewer={data} />
+                </SwiperSlide>
               ))}
             </Swiper>
           </div>

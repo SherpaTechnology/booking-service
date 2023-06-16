@@ -28,6 +28,8 @@
         text-align: center
         margin-bottom: 2rem
         color: #ffff
+        @media (max-width:480px)
+            font-size: 4.8rem
     p
         font-size: 2.3rem
         color: #ffff
@@ -37,6 +39,8 @@
         margin-bottom: 3rem
         max-width: 500px
         margin: 3rem auto
+        @media (max-width:480px)
+            font-size: 1.8rem
 
     .form
         text-align: center
@@ -44,6 +48,8 @@
         width: 90%
         margin: auto
         padding: 10px 0px
+        @media (max-width:480px)
+            width: 100%
 
 .form
     form
@@ -54,8 +60,12 @@
             justify-content: center
             align-items: center
             gap: 10px
+            @media (max-width:667px)
+                flex-direction: column
             // flex-wrap: wrap
         .button-select
+            @media (max-width:667px)
+                width: 100%
             button
                 height: auto
                 padding: 2px 0px

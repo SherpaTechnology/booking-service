@@ -22,6 +22,12 @@
     display: grid
     grid-template-columns: repeat(3,1fr)
     column-gap: 25px
+    @media (max-width:1000px)
+        grid-template-columns: repeat(2,1fr)
+    @media (max-width:667px)
+        grid-template-columns: repeat(1,1fr)
+        margin: 0 auto
+
 .about-section
     padding: 25px 0px
     margin-top: 6rem
@@ -93,9 +99,14 @@
         @include flex($justify:space-evenly)
         max-width: 500px
         margin: auto
+        @media (max-width:480px)
+            flex-direction: column
+
         &--button
             width: 50%
             max-width: 400px
+            @media (max-width:480px)
+                white-space: nowrap
         &--number
             font-size: 1.5rem
             margin: 25px 0
@@ -125,10 +136,16 @@
         height: 300px
         transition: all 0.45s ease-in-out
         object-fit: cover
+        @media (max-width:825px)
+            min-width: 26%
+        @media (max-width:667px)
+            min-width: 40%
+        @media (max-width:480px)
+            min-width: 100%
+    // @media (max-width:667px)
+    //     img
+    //         max-width: 50%
 
-    @media (max-width:667px)
-        img
-            max-width: 50%
     @media  (max-width:500px)
         img
             max-width: 100%
